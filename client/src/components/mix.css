@@ -1,0 +1,145 @@
+/* Ensure full-page height and prevent overflow */
+body, html {
+   height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevents body scrolling */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Center the section */
+section {
+    width: 100%;
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0; 
+}
+
+/* Form container (with shadow retained) */
+section .form_data {
+    width: 450px;
+    padding: 25px 15px;
+    box-shadow: 0 0 15px -10px #2d3748; 
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 90vh; 
+    overflow: hidden;
+     background: white; 
+}
+
+/* Form Heading */
+.form_heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form_data h1 {
+    font-size: 28px;
+    color: #2a4365;
+}
+
+.form_data p {
+    color: #718096;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Form Styling */
+.form_data form {
+    width: 100%;
+    padding: 5px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Input Fields */
+.form_data form .form_input input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #d4d0d0;
+    border-radius: 5px;
+    outline: none;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.form_data form .form_input label{
+    font-weight: 600;
+    font-size: 15px;
+} 
+
+ .form_input .two{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* Input Focus */
+.form_data form .form_input input:focus {
+    border: 2px solid rgba(66, 153, 225, 0.6);
+}
+
+.form_data form .form_input input::placeholder{
+    color: #8694a8;
+    letter-spacing: .5px;
+    font-size: 15px;
+}
+.form_input .showpass{
+    position: absolute;
+    right: 0px;
+    top:1px;
+    padding: 5px 8px;
+    margin-right: 5px;
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #2a4365;
+    background-color: #EDF2F7;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+/* Button */
+form .btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: #1a365d;
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    margin-top: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+form .btn:hover {
+    background-color: #97a1b1;
+}
+
+/* Links */
+.form_data form p {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.form_data form a {
+    text-decoration: none;
+    color: #718096;
+    border-bottom: 2px solid #8694a8;
+}
+
+
