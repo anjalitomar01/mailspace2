@@ -10,7 +10,7 @@ import Campaigns from "../Pages/Dashboard/Campaigns.js";
 import Documentation from"../Pages/Dashboard/Documentation.js";
 import Reports from "../Pages/Dashboard/Reports.js";
 import SubUsers from "../Pages/Dashboard/SubUsers.js";
-
+import Thirdpartyintegration from '../Pages/Thirdpartyintegration.js';
 
 
 
@@ -53,6 +53,9 @@ const Sidebar = ({ setActivePage }) => {
           <li className="flex items-center gap-3 text-gray-700 hover:text-black cursor-pointer"onClick={() => setActivePage("SubUsers")}>
             <FaUsers/> Sub Users
           </li>
+          <li className="flex items-center gap-3 text-gray-700 hover:text-black cursor-pointer"onClick={() => setActivePage("Third-Party SMTP & API Integration")}>
+            <FaUsers/> Third-Party SMTP & API Integration
+            </li>
         </ul>
         </div>
     );
@@ -124,6 +127,7 @@ const Dashboard = () => {
           {activePage === "API Integration" && <APIIntegration />}
           {activePage === "Documentation" && <Documentation />}
           {activePage === "SubUsers" && <SubUsers />}
+          {activePage === "Third-Party SMTP & API Integration" && <Thirdpartyintegration/>}
 
 
 

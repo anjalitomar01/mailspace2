@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaUsers, FaUserPlus, FaTrash, FaEdit, FaCoins, FaPlug } from "react-icons/fa";
 
-const APISMTP = ({ isMasterUser }) => {
+const Thirdpartyintegration = ({ isMasterUser }) => {
   const [subUsers, setSubUsers] = useState([
     { 
       id: 1, name: "John Doe", role: "Admin", email: "john@example.com", contact: "9876543210",
@@ -46,7 +46,7 @@ const APISMTP = ({ isMasterUser }) => {
   return (
     <div className="p-6">
       {/* <h1 className="text-2xl font-bold flex items-center gap-2">
-     //<FaUsers size={28} className="text-blue-500" /> Sub Users Management
+        <FaUsers size={28} className="text-blue-500" /> Sub Users Management
       </h1> */}
       
       {/* Third-Party Integration */}
@@ -80,4 +80,4 @@ const APISMTP = ({ isMasterUser }) => {
   );
 };
 
-export default APISMTP;
+export default Thirdpartyintegration;
