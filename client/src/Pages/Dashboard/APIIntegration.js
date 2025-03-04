@@ -63,6 +63,11 @@ const APIIntegration = () => {
     setTokens(tokens.filter((token) => token.id !== id));
   };
 
+  // Function to delete the Webhook URL
+  const deleteWebhookUrl = () => {
+    setWebhookUrl(""); // Reset the webhook URL
+  };
+
   return (
     <div className="p-6">
       <h1 className="text-2xl font-bold flex items-center gap-2">
@@ -138,9 +143,18 @@ const APIIntegration = () => {
         </div>
       ))}
 
-      {/* Webhook Section (Without Token) */}
+      {/* Webhook Section */}
       <div className="mt-6 bg-white p-4 rounded-lg shadow-md">
         <h2 className="text-lg font-semibold mb-3">Webhooks & Callbacks</h2>
+ {/* Delete Webhook URL Button */}
+ <button
+          onClick={deleteWebhookUrl}
+          className="mt-3 text-red-500 hover:text-red-700"
+          style={{paddingLeft:1070}}
+        >
+          <AiOutlineDelete /> 
+        </button>
+        {/* Webhook URL Section */}
         <p className="text-sm text-gray-600 mb-2">
           Provide a URL to receive real-time event notifications.
         </p>
@@ -160,6 +174,8 @@ const APIIntegration = () => {
             </span>
           ))}
         </div>
+
+       
       </div>
     </div>
   );
