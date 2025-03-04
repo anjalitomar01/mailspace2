@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+import APISMTP from "../../components/SubuserAPISMTP";
 import { FaUsers, FaUserPlus, FaTrash, FaEdit, FaCoins } from "react-icons/fa";
+
 
 const SubUsers = ({ isMasterUser }) => {
   const [subUsers, setSubUsers] = useState([
@@ -168,6 +170,7 @@ const SubUsers = ({ isMasterUser }) => {
           </tbody>
         </table>
       </div>
+      <APISMTP/>
     </div>
   );
 };
