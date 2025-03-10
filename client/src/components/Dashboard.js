@@ -28,7 +28,7 @@ import { MdBolt } from 'react-icons/md';
 const Sidebar = ({ setActivePage }) => {
     return (
       <div className="w-64 h-screen bg-gray-100 p-5 flex flex-col">
-        <h2 className="text-xl font-bold mb-5" onClick={() => setActivePage("activity")}><AiFillHome /> Home</h2>
+        <h2 className="text-xl font-bold mb-5" onClick={() => setActivePage("activity")}>Mailspace</h2>
         <ul className="space-y-4">
           <li className="flex items-center gap-3 text-gray-700 hover:text-black cursor-pointer" onClick={() => setActivePage("Activity")}>
           <AiFillHome /> Home
