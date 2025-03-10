@@ -2,7 +2,7 @@ import React, { useContext, useEffect ,useState} from 'react'
 import { useNavigate } from 'react-router-dom';
 import { LoginContext } from './ContextProvider/Context.js';
 import Contacts from "../Pages/Dashboard/ContactLists.js"
-import Header from './Header'
+import Header from './Header';
 import Activity from "../Pages/Dashboard/Activity.js";
 import APIIntegration from "../Pages/Dashboard/APIIntegration.js";
 import Auto from "../Pages/Dashboard/Auto.js";
@@ -11,7 +11,7 @@ import Documentation from"../Pages/Dashboard/Documentation.js";
 import Reports from "../Pages/Dashboard/Reports.js";
 import SubUsers from "../Pages/Dashboard/SubUsers.js";
 import Thirdpartyintegration from '../Pages/Thirdpartyintegration.js';
-
+import AIWarmup from "../Pages/Dashboard/AIWarmup.js";
 
 
 //react icons
@@ -23,6 +23,8 @@ import { BsCodeSlash } from "react-icons/bs";
 import { HiDocumentText } from "react-icons/hi"; 
 import { FaUsers } from "react-icons/fa"; 
 import { MdContacts } from "react-icons/md"; 
+import { MdBolt } from 'react-icons/md';
+
 const Sidebar = ({ setActivePage }) => {
     return (
       <div className="w-64 h-screen bg-gray-100 p-5 flex flex-col">
@@ -53,6 +55,11 @@ const Sidebar = ({ setActivePage }) => {
           <li className="flex items-center gap-3 text-gray-700 hover:text-black cursor-pointer"onClick={() => setActivePage("SubUsers")}>
             <FaUsers/> Sub Users
           </li>
+
+          <li className="flex items-center gap-3 text-gray-700 hover:text-black cursor-pointer"onClick={() => setActivePage("AIWarmup")}>
+            <MdBolt/> AI Warmup
+            </li>
+
           <li className="flex items-center gap-3 text-gray-700 hover:text-black cursor-pointer"onClick={() => setActivePage("Third-Party SMTP & API Integration")}>
             <FaUsers/> Third-Party SMTP & API Integration
             </li>
@@ -127,6 +134,7 @@ const Dashboard = () => {
           {activePage === "API Integration" && <APIIntegration />}
           {activePage === "Documentation" && <Documentation />}
           {activePage === "SubUsers" && <SubUsers />}
+          {activePage === "AIWarmup" && <AIWarmup />}
           {activePage === "Third-Party SMTP & API Integration" && <Thirdpartyintegration/>}
 
 
