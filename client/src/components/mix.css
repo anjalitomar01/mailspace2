@@ -142,5 +142,71 @@ form .btn:hover {
     color: #718096;
     border-bottom: 2px solid #8694a8;
 }
+/* login gif */
+.login-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 20px;
+    padding: 20px;
+}
 
+.gif-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.gif-container img {
+    width: 80%;
+    max-width: 300px;
+    height: auto;
+}
+
+.form_data {
+    flex: 0.7;
+    max-width: 500px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form_heading {
+    text-align: center;
+}
+
+.btn-sm {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    font-size: 15px;
+    border-radius: 10px;
+}
+
+.google-btn {
+    background: #db4437;
+    color: white;
+}
+
+.github-btn {
+    background: #333;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .login-container {
+        flex-direction: column;
+    }
+
+    .gif-container img {
+        width: 60%;
+    }
+
+    .form_data {
+        max-width: 90%;
+    }
+}
